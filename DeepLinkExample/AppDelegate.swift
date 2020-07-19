@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        if let scheme = url.scheme, scheme.localizedCaseInsensitiveCompare("com.myApp") == .orderedSame, let view = url.host {
+        
+        print(url.scheme!)
+        
+        if let scheme = url.scheme, scheme.localizedCaseInsensitiveCompare("com.egemen.deeplinkexample") == .orderedSame, let view = url.host {
             
             var parameters: [String: String] = [:]
             URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach {
@@ -35,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 viewController.parameters = parameters
                 UIApplication.shared.windows.first?.rootViewController?.present(viewController, animated: true, completion: nil)
             }else if view.lowercased() == "second" {
-                let viewController = storyBoard.instantiateViewController(withIdentifier: "first") as! SecondViewController
+                let viewController = storyBoard.instantiateViewController(withIdentifier: "second") as! SecondViewController
                 viewController.parameters = parameters
                 UIApplication.shared.windows.first?.rootViewController?.present(viewController, animated: true, completion: nil)
             }
