@@ -11,13 +11,36 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let scheme = url.scheme, scheme.localizedCaseInsensitiveCompare("com.myApp") == .orderedSame, let view = url.host {
+            
+            var parameters: [String: String] = [:]
+            URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach {
+                parameters[$0.name] = $0.value
+            }
+            
+            if view.lowercased() == "first" {
+                
+            }else if view.lowercased() == "second" {
+                
+            }
+            
+            
+            
+            //redirect(to: view, with: parameters)
+        }
+        return true
+    }
+    
+    
+    
     // MARK: UISceneSession Lifecycle
 
     @available(iOS 13.0, *)
