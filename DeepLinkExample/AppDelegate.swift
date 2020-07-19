@@ -26,10 +26,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 parameters[$0.name] = $0.value
             }
             
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+            
+            
             if view.lowercased() == "first" {
-                
+                let viewController = storyBoard.instantiateViewController(withIdentifier: "first") as! FirstViewController
+                viewController.parameters = parameters
+                UIApplication.shared.windows.first?.rootViewController?.present(viewController, animated: true, completion: nil)
             }else if view.lowercased() == "second" {
-                
+                let viewController = storyBoard.instantiateViewController(withIdentifier: "first") as! SecondViewController
+                viewController.parameters = parameters
+                UIApplication.shared.windows.first?.rootViewController?.present(viewController, animated: true, completion: nil)
             }
             
             

@@ -15,6 +15,7 @@ class SecondViewController: UIViewController, UITableViewDelegate,UITableViewDat
     @IBOutlet weak var linkField: UITextField!
     
     @IBAction func goToLink(_ sender: Any) {
+        
     }
     
     override func viewDidLoad() {
@@ -23,19 +24,19 @@ class SecondViewController: UIViewController, UITableViewDelegate,UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1 // parameters.count
+        return parameters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
+        let key = Array(parameters)[indexPath.item].key
+        let value = parameters[key]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "parameter")!
         //        Hücrenin solda yer alan metinlerine dizimizdeki isimleri yerleştiriyoruz.
-                cell.textLabel?.text = "kkey"
+                cell.textLabel?.text = key
         //        Hücrenin sağda yer alan metinlerine dizimizdeki yaşları yerleştiriyoruz.
-                cell.detailTextLabel?.text = "valll"
+                cell.detailTextLabel?.text = value
         //        Hücremiz hazır. Fonksiyona hücremizi çıktı olarak veriyoruz.
                 return cell
     }
