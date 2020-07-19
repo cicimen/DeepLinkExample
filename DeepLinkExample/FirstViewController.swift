@@ -10,6 +10,11 @@ import UIKit
 
 class FirstViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var linkField: UITextField!
+    
+    @IBAction func goToLink(_ sender: Any) {
+    }
+    
     var parameters = [String:String]()
     
     override func viewDidLoad() {
@@ -19,7 +24,7 @@ class FirstViewController: UIViewController, UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return parameters.count
+        return 1// parameters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

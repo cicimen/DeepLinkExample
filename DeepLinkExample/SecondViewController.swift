@@ -12,6 +12,11 @@ class SecondViewController: UIViewController, UITableViewDelegate,UITableViewDat
     
     var parameters = [String:String]()
     
+    @IBOutlet weak var linkField: UITextField!
+    
+    @IBAction func goToLink(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,7 +24,7 @@ class SecondViewController: UIViewController, UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return parameters.count
+        return 1 // parameters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
