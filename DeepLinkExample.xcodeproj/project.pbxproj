@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		88B9BF5D24C4D00D00CEB61E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF5C24C4D00D00CEB61E /* AppDelegate.swift */; };
 		88B9BF5F24C4D00D00CEB61E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF5E24C4D00D00CEB61E /* SceneDelegate.swift */; };
-		88B9BF6124C4D00D00CEB61E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF6024C4D00D00CEB61E /* ViewController.swift */; };
+		88B9BF6124C4D00D00CEB61E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF6024C4D00D00CEB61E /* FirstViewController.swift */; };
 		88B9BF6424C4D00D00CEB61E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B9BF6224C4D00D00CEB61E /* Main.storyboard */; };
 		88B9BF6624C4D01200CEB61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B9BF6524C4D01200CEB61E /* Assets.xcassets */; };
 		88B9BF6924C4D01200CEB61E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B9BF6724C4D01200CEB61E /* LaunchScreen.storyboard */; };
+		88B9BF7124C4D2CD00CEB61E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF7024C4D2CD00CEB61E /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88B9BF5924C4D00D00CEB61E /* DeepLinkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepLinkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B9BF5C24C4D00D00CEB61E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B9BF5E24C4D00D00CEB61E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88B9BF6024C4D00D00CEB61E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88B9BF6024C4D00D00CEB61E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		88B9BF6324C4D00D00CEB61E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88B9BF6524C4D01200CEB61E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B9BF6824C4D01200CEB61E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B9BF6A24C4D01200CEB61E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B9BF7024C4D2CD00CEB61E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				88B9BF5C24C4D00D00CEB61E /* AppDelegate.swift */,
 				88B9BF5E24C4D00D00CEB61E /* SceneDelegate.swift */,
-				88B9BF6024C4D00D00CEB61E /* ViewController.swift */,
+				88B9BF6024C4D00D00CEB61E /* FirstViewController.swift */,
+				88B9BF7024C4D2CD00CEB61E /* SecondViewController.swift */,
 				88B9BF6224C4D00D00CEB61E /* Main.storyboard */,
 				88B9BF6524C4D01200CEB61E /* Assets.xcassets */,
 				88B9BF6724C4D01200CEB61E /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88B9BF6124C4D00D00CEB61E /* ViewController.swift in Sources */,
+				88B9BF7124C4D2CD00CEB61E /* SecondViewController.swift in Sources */,
+				88B9BF6124C4D00D00CEB61E /* FirstViewController.swift in Sources */,
 				88B9BF5D24C4D00D00CEB61E /* AppDelegate.swift in Sources */,
 				88B9BF5F24C4D00D00CEB61E /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M383PCDJZ;
 				INFOPLIST_FILE = DeepLinkExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M383PCDJZ;
 				INFOPLIST_FILE = DeepLinkExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
