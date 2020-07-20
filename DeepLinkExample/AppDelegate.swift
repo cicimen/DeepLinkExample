@@ -31,17 +31,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 
-            
-            
-            if view.lowercased() == "first" {
-                let viewController = storyBoard.instantiateViewController(withIdentifier: "first") as! FirstViewController
-                viewController.parameters = parameters
-                UIApplication.shared.windows.first?.rootViewController?.present(viewController, animated: true, completion: nil)
-            }else if view.lowercased() == "second" {
-                let viewController = storyBoard.instantiateViewController(withIdentifier: "second") as! SecondViewController
-                viewController.parameters = parameters
-                UIApplication.shared.windows.first?.rootViewController?.present(viewController, animated: true, completion: nil)
+            if view.lowercased() == "first" || view.lowercased() == "second" {
+                if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                    while let presentedViewController = topController.presentedViewController {
+                        topController = presentedViewController
+                    }
+                    if view.lowercased() == "first" {
+                        let viewController = storyBoard.instantiateViewController(withIdentifier: "first") as! FirstViewController
+                        viewController.parameters = parameters
+                        topController.present(viewController, animated: false, completion: nil)
+                    }else if view.lowercased() == "second" {
+                        let viewController = storyBoard.instantiateViewController(withIdentifier: "second") as! SecondViewController
+                        viewController.parameters = parameters
+                        topController.present(viewController, animated: false, completion: nil)
+                    }
+                }
             }
+            
+            
             
             
             
