@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8892791824C5C32900E77526 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892791724C5C32900E77526 /* Helper.swift */; };
 		88B9BF5D24C4D00D00CEB61E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF5C24C4D00D00CEB61E /* AppDelegate.swift */; };
 		88B9BF5F24C4D00D00CEB61E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF5E24C4D00D00CEB61E /* SceneDelegate.swift */; };
 		88B9BF6124C4D00D00CEB61E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9BF6024C4D00D00CEB61E /* FirstViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8892791724C5C32900E77526 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		88B9BF5924C4D00D00CEB61E /* DeepLinkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepLinkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B9BF5C24C4D00D00CEB61E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B9BF5E24C4D00D00CEB61E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				88B9BF6524C4D01200CEB61E /* Assets.xcassets */,
 				88B9BF6724C4D01200CEB61E /* LaunchScreen.storyboard */,
 				88B9BF6A24C4D01200CEB61E /* Info.plist */,
+				8892791724C5C32900E77526 /* Helper.swift */,
 			);
 			path = DeepLinkExample;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				88B9BF7124C4D2CD00CEB61E /* SecondViewController.swift in Sources */,
 				88B9BF6124C4D00D00CEB61E /* FirstViewController.swift in Sources */,
+				8892791824C5C32900E77526 /* Helper.swift in Sources */,
 				88B9BF5D24C4D00D00CEB61E /* AppDelegate.swift in Sources */,
 				88B9BF5F24C4D00D00CEB61E /* SceneDelegate.swift in Sources */,
 			);

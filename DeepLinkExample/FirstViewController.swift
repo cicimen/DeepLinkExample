@@ -8,38 +8,33 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var linkField: UITextField!
     
     @IBAction func goToLink(_ sender: Any) {
-        
+        if let urlString = linkField.text {
+            Helper.openUrl(scheme: urlString)
+        }
     }
     
     var parameters = [String:String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return parameters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let key = Array(parameters)[indexPath.item].key
         let value = parameters[key]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "parameter")!
-        //        Hücrenin solda yer alan metinlerine dizimizdeki isimleri yerleştiriyoruz.
-                cell.textLabel?.text = key
-        //        Hücrenin sağda yer alan metinlerine dizimizdeki yaşları yerleştiriyoruz.
-                cell.detailTextLabel?.text = value
-        //        Hücremiz hazır. Fonksiyona hücremizi çıktı olarak veriyoruz.
-                return cell
+        cell.textLabel?.text = key
+        cell.detailTextLabel?.text = value
+        return cell
     }
 }
 
